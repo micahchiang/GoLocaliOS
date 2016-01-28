@@ -16,6 +16,8 @@ class dashboardViewController: UIViewController {
     var userID: String = ""
     var userEmail: String = ""
     
+    @IBOutlet weak var profilePictureImage: UIImageView!
+    
     @IBOutlet weak var userNameLabel: UILabel!
 
     override func viewDidLoad() {
@@ -27,6 +29,12 @@ class dashboardViewController: UIViewController {
         print(firstName)
         setUser()
         userNameLabel.text! = "Welcome, " + firstName
+        
+        profilePictureImage.layer.borderWidth = 1
+        profilePictureImage.layer.masksToBounds = false
+        profilePictureImage.layer.borderColor = UIColor.blackColor().CGColor
+        profilePictureImage.layer.cornerRadius = profilePictureImage.frame.height/2
+        profilePictureImage.clipsToBounds = true
     }
     
 

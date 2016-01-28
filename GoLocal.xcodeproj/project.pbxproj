@@ -18,6 +18,7 @@
 		495527ED1C59731A0094C80E /* GLUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495527EC1C59731A0094C80E /* GLUser.swift */; };
 		495527EF1C5977D30094C80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495527EE1C5977D30094C80E /* Main.storyboard */; };
 		495527F11C5979DC0094C80E /* dashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495527F01C5979DC0094C80E /* dashboardViewController.swift */; };
+		495527F41C59A7C60094C80E /* mc_biopic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 495527F31C59A7C60094C80E /* mc_biopic.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		495527EC1C59731A0094C80E /* GLUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLUser.swift; sourceTree = "<group>"; };
 		495527EE1C5977D30094C80E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		495527F01C5979DC0094C80E /* dashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dashboardViewController.swift; sourceTree = "<group>"; };
+		495527F31C59A7C60094C80E /* mc_biopic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mc_biopic.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		495527861C583EBA0094C80E /* GoLocal */ = {
 			isa = PBXGroup;
 			children = (
+				495527F21C59A7C60094C80E /* media */,
 				495527991C583EFA0094C80E /* AppDelegate */,
 				4955279B1C583EFA0094C80E /* Helpers */,
 				4955279C1C583EFA0094C80E /* Models */,
@@ -214,6 +217,14 @@
 				495527E21C5892C70094C80E /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		495527F21C59A7C60094C80E /* media */ = {
+			isa = PBXGroup;
+			children = (
+				495527F31C59A7C60094C80E /* mc_biopic.jpg */,
+			);
+			path = media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				495527EF1C5977D30094C80E /* Main.storyboard in Resources */,
+				495527F41C59A7C60094C80E /* mc_biopic.jpg in Resources */,
 				4955278F1C583EBA0094C80E /* Assets.xcassets in Resources */,
 				495527A41C583EFA0094C80E /* LaunchScreen.storyboard in Resources */,
 			);
