@@ -10,12 +10,14 @@
 		4955278F1C583EBA0094C80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4955278E1C583EBA0094C80E /* Assets.xcassets */; };
 		495527A31C583EFA0094C80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955279A1C583EFA0094C80E /* AppDelegate.swift */; };
 		495527A41C583EFA0094C80E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4955279E1C583EFA0094C80E /* LaunchScreen.storyboard */; };
-		495527A51C583EFA0094C80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4955279F1C583EFA0094C80E /* Main.storyboard */; };
-		495527A61C583EFA0094C80E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495527A11C583EFA0094C80E /* ViewController.swift */; };
 		495527A81C584EC00094C80E /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495527A71C584EC00094C80E /* RegisterPageViewController.swift */; };
 		495527AC1C5858D00094C80E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495527AB1C5858D00094C80E /* LoginViewController.swift */; };
 		495527E31C5892D80094C80E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495527D61C5892C70094C80E /* Alamofire.framework */; };
 		495527E41C5892D80094C80E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 495527D61C5892C70094C80E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		495527EB1C5973010094C80E /* GLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495527EA1C5973010094C80E /* GLModel.swift */; };
+		495527ED1C59731A0094C80E /* GLUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495527EC1C59731A0094C80E /* GLUser.swift */; };
+		495527EF1C5977D30094C80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495527EE1C5977D30094C80E /* Main.storyboard */; };
+		495527F11C5979DC0094C80E /* dashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495527F01C5979DC0094C80E /* dashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,11 +99,13 @@
 		495527931C583EBA0094C80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4955279A1C583EFA0094C80E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4955279E1C583EFA0094C80E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4955279F1C583EFA0094C80E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		495527A11C583EFA0094C80E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		495527A71C584EC00094C80E /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		495527AB1C5858D00094C80E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		495527CB1C5892C70094C80E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		495527EA1C5973010094C80E /* GLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLModel.swift; sourceTree = "<group>"; };
+		495527EC1C59731A0094C80E /* GLUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLUser.swift; sourceTree = "<group>"; };
+		495527EE1C5977D30094C80E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		495527F01C5979DC0094C80E /* dashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 		4955279C1C583EFA0094C80E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				495527EA1C5973010094C80E /* GLModel.swift */,
+				495527EC1C59731A0094C80E /* GLUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,8 +179,8 @@
 		4955279D1C583EFA0094C80E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				495527EE1C5977D30094C80E /* Main.storyboard */,
 				4955279E1C583EFA0094C80E /* LaunchScreen.storyboard */,
-				4955279F1C583EFA0094C80E /* Main.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -182,9 +188,9 @@
 		495527A01C583EFA0094C80E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				495527A11C583EFA0094C80E /* ViewController.swift */,
 				495527A71C584EC00094C80E /* RegisterPageViewController.swift */,
 				495527AB1C5858D00094C80E /* LoginViewController.swift */,
+				495527F01C5979DC0094C80E /* dashboardViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -328,7 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				495527A51C583EFA0094C80E /* Main.storyboard in Resources */,
+				495527EF1C5977D30094C80E /* Main.storyboard in Resources */,
 				4955278F1C583EBA0094C80E /* Assets.xcassets in Resources */,
 				495527A41C583EFA0094C80E /* LaunchScreen.storyboard in Resources */,
 			);
@@ -342,7 +348,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				495527AC1C5858D00094C80E /* LoginViewController.swift in Sources */,
-				495527A61C583EFA0094C80E /* ViewController.swift in Sources */,
+				495527F11C5979DC0094C80E /* dashboardViewController.swift in Sources */,
+				495527ED1C59731A0094C80E /* GLUser.swift in Sources */,
+				495527EB1C5973010094C80E /* GLModel.swift in Sources */,
 				495527A31C583EFA0094C80E /* AppDelegate.swift in Sources */,
 				495527A81C584EC00094C80E /* RegisterPageViewController.swift in Sources */,
 			);

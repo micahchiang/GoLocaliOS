@@ -10,12 +10,10 @@ import UIKit
 import Alamofire
 
 class LoginViewController: UIViewController {
-    
-    weak var userDelegate: getUserRequestor?
 
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
-    
+    var resultArray: Array<Dictionary<String, AnyObject>> = []
     @IBAction func loginButtonPressed(sender: UIButton) {
         let userEmail = userEmailTextField.text!
         let userPassword = userPasswordTextField.text!
@@ -36,16 +34,25 @@ class LoginViewController: UIViewController {
                 print(response.response) //URL response
                 print(response.data) //server data
                 print(response.result) //result of response serialization
-                var resultArray: Array<Dictionary<String, AnyObject>> = []
+
                 if let JSON = response.result.value{
                     print("JSON: \(JSON)")
-                    resultArray.append(JSON as! Dictionary)
-                    print(resultArray)
-                self.userDelegate?.retrieveUserInformation(resultArray)
-                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
-                self.dismissViewControllerAnimated(true, completion: nil)
+                    self.resultArray.append(JSON as! Dictionary)
+                    print(self.resultArray)
+                    self.performSegueWithIdentifier("segueToDashboard", sender: self)
                 }
             }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueToDashboard" {
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! dashboardViewController
+            controller.currentUser = resultArray
+            resultArray = []
+            userEmailTextField.text! = ""
+            userPasswordTextField.text! = ""
         }
     }
     
@@ -59,3 +66,5 @@ class LoginViewController: UIViewController {
     }
 
 }
+
+

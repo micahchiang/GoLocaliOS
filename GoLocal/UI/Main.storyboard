@@ -6,54 +6,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoLocal" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQG-EL-s8l">
-                                <rect key="frame" x="20" y="20" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlt-MQ-Ikc">
-                                <rect key="frame" x="255" y="285" width="90" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="dyC-Kj-2cP"/>
-                                </constraints>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XiX-I1-LEb"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="GQG-EL-s8l" secondAttribute="leading" id="36U-Pf-d6m"/>
-                            <constraint firstItem="jlt-MQ-Ikc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EAk-ab-PJR"/>
-                            <constraint firstItem="GQG-EL-s8l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nro-RC-Z33"/>
-                            <constraint firstItem="jlt-MQ-Ikc" firstAttribute="top" secondItem="GQG-EL-s8l" secondAttribute="bottom" constant="244" id="OOs-Sv-nYz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GQG-EL-s8l" secondAttribute="trailing" id="bf0-au-p1Y"/>
-                            <constraint firstItem="GQG-EL-s8l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oCy-NL-hRj"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="p9v-xe-PYd"/>
-                    <connections>
-                        <segue destination="PSC-6b-1Dj" kind="presentation" identifier="segueToLoginView" id="hrQ-I7-90l"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1127" y="429"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="VEe-PV-wZv">
             <objects>
@@ -87,7 +39,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="PSC-6b-1Dj" eventType="touchUpInside" id="xEh-73-SPi"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueToDashboard" id="56m-JP-Lhj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfB-EB-NDi">
@@ -124,14 +75,58 @@
                             <constraint firstItem="hmq-9a-UDN" firstAttribute="leading" secondItem="vJC-OK-c4K" secondAttribute="leading" id="qkx-Bk-IqB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ELs-53-icQ"/>
                     <connections>
                         <outlet property="userEmailTextField" destination="C2o-kl-0II" id="9bN-5B-kYm"/>
                         <outlet property="userPasswordTextField" destination="hmq-9a-UDN" id="Y29-0k-axb"/>
+                        <segue destination="9fU-vO-Gdc" kind="presentation" identifier="segueToDashboard" id="tlQ-ZW-rj8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCR-cd-T8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1882" y="454"/>
+        </scene>
+        <!--Dashboard View Controller-->
+        <scene sceneID="Ra7-Kx-0Hi">
+            <objects>
+                <viewController id="ZhS-xB-Bdw" customClass="dashboardViewController" customModule="GoLocal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mdJ-EX-bCh"/>
+                        <viewControllerLayoutGuide type="bottom" id="BLK-LK-GSn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L17-JR-ybf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61G-z5-h7R">
+                                <rect key="frame" x="20" y="95" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="61G-z5-h7R" firstAttribute="centerX" secondItem="L17-JR-ybf" secondAttribute="centerX" id="K0i-Up-RbU"/>
+                            <constraint firstItem="61G-z5-h7R" firstAttribute="top" secondItem="mdJ-EX-bCh" secondAttribute="bottom" constant="31" id="YMi-yo-LkP"/>
+                            <constraint firstItem="61G-z5-h7R" firstAttribute="leading" secondItem="L17-JR-ybf" secondAttribute="leadingMargin" id="bsu-BK-sf7"/>
+                            <constraint firstItem="61G-z5-h7R" firstAttribute="trailing" secondItem="L17-JR-ybf" secondAttribute="trailingMargin" id="tU9-me-BH1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="67a-K7-jJR">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="X4C-hH-W1n">
+                            <connections>
+                                <action selector="logoutButtonTapped:" destination="ZhS-xB-Bdw" id="tb5-XN-TYc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="userNameLabel" destination="61G-z5-h7R" id="nSe-al-Ey9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q8p-ee-lZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3372" y="454"/>
         </scene>
         <!--Register Page View Controller-->
         <scene sceneID="vBR-zS-u3b">
@@ -213,8 +208,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="I already have an account"/>
                                 <connections>
-                                    <action selector="existingAccountButtonPressed:" destination="inM-XK-N4I" eventType="touchUpInside" id="RUK-S1-QuW"/>
-                                    <segue destination="PSC-6b-1Dj" kind="presentation" identifier="backToLoginView" modalTransitionStyle="flipHorizontal" id="HdV-sA-pWX"/>
+                                    <segue destination="PSC-6b-1Dj" kind="presentation" identifier="segueFromRegToLogin" modalTransitionStyle="flipHorizontal" id="Y5C-5c-NW8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -249,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmn-XB-2VX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="1237"/>
+            <point key="canvasLocation" x="1882" y="1237"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eY1-hG-n1L">
@@ -263,16 +257,33 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KsQ-p5-Z1K"/>
+                        <segue destination="PSC-6b-1Dj" kind="relationship" relationship="rootViewController" id="Tgs-Uy-hGt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBI-ST-ria" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="466" y="429"/>
+            <point key="canvasLocation" x="1145" y="454"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y22-xW-qk7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9fU-vO-Gdc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7oY-1s-cpH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZhS-xB-Bdw" kind="relationship" relationship="rootViewController" id="6X5-X8-1eC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Hv-ZY-xmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560" y="454"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hrQ-I7-90l"/>
-        <segue reference="56m-JP-Lhj"/>
+        <segue reference="Y5C-5c-NW8"/>
     </inferredMetricsTieBreakers>
 </document>
